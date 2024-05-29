@@ -19,4 +19,5 @@ jobs:
       - name: Change to test repo
         run: cd tests
 
-
+      - name: Build the tests
+        run: make
