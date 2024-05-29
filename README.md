@@ -1,4 +1,4 @@
-# libasm
+# LibAsm
 
 ## Table of Contents
 - [Introduction](#introduction)
