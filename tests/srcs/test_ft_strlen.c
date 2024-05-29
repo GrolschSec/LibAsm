@@ -6,7 +6,7 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:53:46 by rlouvrie          #+#    #+#             */
-/*   Updated: 2024/05/29 18:34:08 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2024/05/29 19:02:00 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 START_TEST(test_ft_strlen_basic)
 {
-	ck_assert_int_eq(strlen("Hello"), 5);
+	ck_assert_int_eq(strlen("Hello"), 3);
 }
 
 TCase	*tcase_ft_strlen(void)
