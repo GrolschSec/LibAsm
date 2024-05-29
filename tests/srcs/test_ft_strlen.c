@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libasm.h                                           :+:      :+:    :+:   */
+/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 16:56:21 by rlouvrie          #+#    #+#             */
-/*   Updated: 2024/05/29 16:57:00 by rlouvrie         ###   ########.fr       */
+/*   Created: 2024/05/29 16:53:46 by rlouvrie          #+#    #+#             */
+/*   Updated: 2024/05/29 18:34:08 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBASM_H
-# define LIBASM_H
+#include "../test.h"
 
-#endif
+START_TEST(test_ft_strlen_basic)
+{
+	ck_assert_int_eq(strlen("Hello"), 5);
+}
+
+TCase	*tcase_ft_strlen(void)
+{
+	TCase	*tc;
+
+	tc = tcase_create("ft_strlen");
+	tcase_add_test(tc, test_ft_strlen_basic);
+	return (tc);
+}

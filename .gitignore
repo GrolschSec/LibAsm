@@ -1,3 +1,5 @@
 main.c
 objs/
 libasm.a
+test/objs
+test/test

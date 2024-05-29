@@ -5,47 +5,46 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/29 16:20:43 by rlouvrie          #+#    #+#              #
-#    Updated: 2024/05/29 17:27:29 by rlouvrie         ###   ########.fr        #
+#    Created: 2024/05/29 17:13:41 by rlouvrie          #+#    #+#              #
+#    Updated: 2024/05/29 18:28:42 by rlouvrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libasm.a
-
-NASM = nasm
-
-ASMFLAGS = -f elf64
+NAME = test
 
 SRC_DIR = srcs
 
+SRCS_FILES = test.c \
+			test_ft_strlen.c
+
+SRCS = $(addprefix $(SRC_DIR)/, $(SRCS_FILES))
+
 OBJ_DIR = objs
 
-ASM_FILES = ft_strlen.s \
-			ft_strcpy.s \
-			ft_strcmp.s \
-			ft_write.s \
-			ft_read.s \
-			ft_strdup.s
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS_FILES:.c=.o))
 
-ASM_SRCS = $(addprefix $(SRC_DIR)/, $(ASM_FILES))
-
-OBJS = $(addprefix $(OBJ_DIR)/, $(ASM_FILES:.s=.o))
+LIBASM = ../libasm.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(LIBASM)
+	gcc -o $(NAME) $(OBJS) -L.. -lasm -lcheck -lm -lrt -lsubunit -pthread
+
+$(LIBASM):
+	$(MAKE) -C ..
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.s | $(OBJ_DIR)
-	$(NASM) $(ASMFLAGS) $< -o $@
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+	gcc -c $< -o $@
 
 clean:
+	make -C .. clean
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
+	make -C .. fclean
 	rm -f $(NAME)
 
 re: fclean all
