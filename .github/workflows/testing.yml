@@ -16,11 +16,12 @@ jobs:
           sudo apt update
           sudo apt install -y check nasm
 
-      - name: Change to test repo
-        run: cd tests
-
       - name: Build the tests
-        run: make
+        run: |
+          cd tests
+          make
 
       - name: Run the tests
-        run: pwd
+        run: |
+          cd tests
+          ./test
