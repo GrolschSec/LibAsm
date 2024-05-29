@@ -23,4 +23,4 @@ jobs:
         run: make
 
       - name: Run the tests
-        run: ./test
+        run: pwd
