@@ -1,4 +1,4 @@
-name: Testing Env
+name: Continuous Integration
 on:
   - push
   - pull_request
@@ -10,4 +10,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4.1.5
-      
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y check
+
+      - name: Change to test repo
+        run: cd tests
+
+
