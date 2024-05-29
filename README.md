@@ -61,20 +61,21 @@ The following functions are implemented in **libasm**:
 
 ## Testing
 
-To test the library, you can use the provided test suite. Simply run:
-1 - If not installed on your machine install check:
+To test the library, you can use the provided test suite. Simply run:  
+
+1. If not installed on your machine install check:  
 ```bash
   sudo apt install check
 ```
-2 - Change to test directory
+2. Change to test directory:  
 ```bash
   cd tests
 ```
-3 - Make the tests:
+3 - Make the tests:  
 ```bash
   make
 ```
-4 - Run them:
+4 - Run them:  
 ```bash
   ./test
 ```
