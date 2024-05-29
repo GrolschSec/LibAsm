@@ -10,11 +10,10 @@
 
 ## Introduction
 
-**libasm** is a library written in assembly language that provides implementations for a set of standard C library functions. The purpose of this project is to deepen understanding of low-level programming and the inner workings of these functions.
+**libasm** is a library written in assembly language that provides implementations for a set of standard C library functions. This project is part of the 42 post-common core curriculum. The purpose of this project is to deepen understanding of low-level programming and the inner workings of these functions.
 
 ## Features
 
-- High-performance implementations of essential C library functions.
 - A deeper understanding of assembly language programming and optimization techniques.
 - Educational insights into system-level programming.
 
@@ -61,7 +60,7 @@ The following functions are implemented in **libasm**:
 
 ## Testing
 
-To test the library, you can use the provided test suite. Simply run:  
+To test the library, you can use the provided test suite. The project includes a GitHub Actions workflow that automatically runs tests whenever you push changes to the repository.  
 
 1. If not installed on your machine install check:  
 ```bash
