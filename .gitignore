@@ -4,3 +4,4 @@ libasm.a
 test/objs
 tests/test
 libasmTester
+test
