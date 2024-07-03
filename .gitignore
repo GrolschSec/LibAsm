@@ -5,3 +5,4 @@ test/objs
 tests/test
 libasmTester
 test
+.vscode/
