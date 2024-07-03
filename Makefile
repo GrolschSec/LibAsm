@@ -6,11 +6,13 @@
 #    By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/29 16:20:43 by rlouvrie          #+#    #+#              #
-#    Updated: 2024/05/29 17:27:29 by rlouvrie         ###   ########.fr        #
+#    Updated: 2024/07/03 14:17:41 by rlouvrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libasm.a
+
+CC = cc
 
 NASM = nasm
 
@@ -20,12 +22,7 @@ SRC_DIR = srcs
 
 OBJ_DIR = objs
 
-ASM_FILES = ft_strlen.s \
-			ft_strcpy.s \
-			ft_strcmp.s \
-			ft_write.s \
-			ft_read.s \
-			ft_strdup.s
+ASM_FILES = ft_strlen.s
 
 ASM_SRCS = $(addprefix $(SRC_DIR)/, $(ASM_FILES))
 
@@ -41,6 +38,10 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s | $(OBJ_DIR)
 	$(NASM) $(ASMFLAGS) $< -o $@
+
+test: fclean $(NAME)
+	$(CC) -g -Wall -Werror -Wextra -o test main.c libasm.a
+	./test
 
 clean:
 	rm -rf $(OBJ_DIR)

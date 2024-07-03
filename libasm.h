@@ -6,13 +6,14 @@
 /*   By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 16:56:21 by rlouvrie          #+#    #+#             */
-/*   Updated: 2024/07/02 17:11:07 by rlouvrie         ###   ########.fr       */
+/*   Updated: 2024/07/03 11:24:33 by rlouvrie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBASM_H
 # define LIBASM_H
 # include <sys/types.h>
+# include <errno.h>
 
 /* srcs/ft_strcmp.s */
 int		ft_strcmp(const char *s1, const char *s2);
