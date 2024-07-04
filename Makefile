@@ -6,7 +6,7 @@
 #    By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/29 16:20:43 by rlouvrie          #+#    #+#              #
-#    Updated: 2024/07/03 18:16:57 by rlouvrie         ###   ########.fr        #
+#    Updated: 2024/07/04 13:43:18 by rlouvrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f test
 
 re: fclean all
 
