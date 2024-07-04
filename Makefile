@@ -6,7 +6,7 @@
 #    By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/29 16:20:43 by rlouvrie          #+#    #+#              #
-#    Updated: 2024/07/03 16:18:32 by rlouvrie         ###   ########.fr        #
+#    Updated: 2024/07/03 18:16:57 by rlouvrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ OBJ_DIR = objs
 ASM_FILES = ft_strlen.s \
 			ft_strcpy.s \
 			ft_strcmp.s \
-			ft_write.s
+			ft_write.s	\
+			ft_read.s 	\
+			ft_strdup.s
 
 ASM_SRCS = $(addprefix $(SRC_DIR)/, $(ASM_FILES))
 
