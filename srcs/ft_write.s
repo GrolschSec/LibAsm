@@ -19,11 +19,20 @@ ft_write:
     ret
 
 .error:
+	cmp rsi, 0
+	je .einval
     mov rdi, rax
 	neg rdi
-	call __errno_location
+	call __errno_location WRT ..plt
 	mov [rax], rdi
 	mov rax, -1
     ret
+
+.einval:
+	mov rdi, 22
+	call __errno_location WRT ..plt
+	mov [rax], rdi
+	mov rax, -1
+	ret
 
 section .note.GNU-stack noalloc noexec nowrite progbits
