@@ -1,4 +1,3 @@
-main.c
 objs/
 libasm.a
 test/objs
