@@ -21,7 +21,7 @@ ft_read:
 .error:
 	mov rdi, rax
 	neg rdi
-	call __errno_location
+	call __errno_location WRT ..plt
 	mov [rax], rdi
 	mov rax, -1
 	ret
