@@ -6,7 +6,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Functions Implemented](#functions-implemented)
-- [Testing](#testing)
 
 ## Introduction
 
