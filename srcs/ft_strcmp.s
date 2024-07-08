@@ -23,7 +23,6 @@ ft_strcmp:
 	inc rcx
 	jmp .loop
 
-
 .end:
     sub al, bl
 	movsx rax, al
