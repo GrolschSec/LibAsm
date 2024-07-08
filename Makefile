@@ -6,7 +6,7 @@
 #    By: rlouvrie <rlouvrie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/29 16:20:43 by rlouvrie          #+#    #+#              #
-#    Updated: 2024/07/04 13:43:18 by rlouvrie         ###   ########.fr        #
+#    Updated: 2024/07/08 12:42:20 by rlouvrie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s | $(OBJ_DIR)
 	$(NASM) $(ASMFLAGS) $< -o $@
 
 test: fclean $(NAME)
-	$(CC) -g -Wall -Werror -Wextra -o test main.c libasm.a
+	$(CC) -o test main.c libasm.a
 	./test
 
 clean:

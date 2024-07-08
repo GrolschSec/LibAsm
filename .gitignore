@@ -5,3 +5,5 @@ tests/test
 libasmTester
 test
 .vscode/
+tripouille/
+xtrm/
