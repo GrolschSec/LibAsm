@@ -43,7 +43,7 @@ After installation, you can use **libasm** in your projects. To link the library
    ```
 2. Compile your project with the library:
    ```bash
-   gcc -o myprogram myprogram.c -L. -lasm
+   gcc -o myprogram myprogram.c libasm.a
    ```
 
 ## Functions Implemented
